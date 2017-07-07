@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+    var list = ["en", "to", "tre"];
+
+    buttonMaker = function(text, clickFunc){
+        b = document.createElement("button");
+        b.textContent = text;
+        b.addEventListener('click', function () {
+            clickFunc(text);
+        });
+        return b;
+    };
+
+           for (i=0; i<list.length; i++) {
+               document.body.appendChild(buttonMaker(list[i],alert));
+          }
+
+
+</script>
+</body>
+</html>
